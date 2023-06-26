@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  font-family: cursive;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+    width: 100vw;
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+nav {
+  width: 100%;
+  height: 6rem;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 2.2rem;
+}
+footer {
+  width: 100%;
+  height: 4rem;
+  border-top: 1px solid rgb(161, 160, 160);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  bottom: 0;
+  position: absolute;
+  background-color: rgb(161, 160, 160);
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+ .main{
+    margin: 2rem;
+     display: flex ;  
+    width: 70rem; 
+     flex-direction: column;  
+     justify-content: flex-start;  
+     align-items: flex-start; 
+ }
+.title{
+    font-size: 1.8rem;
 }
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    /* margin-left: 6rem; */
+}
+input{
+    all: unset;
+    width: 90%;
+    height: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    font-family: cursive;
+    color: rgb(53, 53, 53);
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+} 
+input:focus{
+  border: 1px solid purple;
+}
+label{
+    font-size: 1.4rem;
+    color: gray;
+    margin-left: 0.5rem;
+}
+.btn{
+    all: unset;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(167, 165, 165);
+    color:#fff ;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-left: 0.2rem;
+    font-size: 1.3rem;
+}
+.btn:hover{
+    background-color: gray;
+}
+.contact-section{
+    width: 100%;
+    height: auto; 
+    margin-top: 2rem;
+}
+ul{
+  list-style-type: none;
+  height: 20rem;
+  overflow-y: auto;
+}
+.contact{
+ 
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  border-top: 1px solid rgb(197, 197, 197);
+  border-bottom: 1px solid rgb(197, 197, 197);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.profile-icon{
+ width: 4rem;
+ height: 4rem;
+ border-radius: 100%;
+ color: rgb(97, 97, 97);
+ background-color: #c4c4c4;
+ margin-right: 2rem;
+ 
+}
+.profile-email{
+  color: gray;
+  font-size: 1rem;
+}
+.contact-info{
+  width: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.trash-icon{
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgb(252, 63, 63);
 }
