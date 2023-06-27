@@ -21,12 +21,13 @@ html {
   align-items: center;
 }
 nav {
+  padding-top: 1rem;
   width: 100%;
-  height: 6rem;
+  height: 10rem;
   border-bottom: 1px solid rgb(182, 182, 182);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 2.2rem;
 }
 footer {
@@ -82,6 +83,12 @@ label{
     color: gray;
     margin-left: 0.5rem;
 }
+.btns{
+  width: 23rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .btn{
     all: unset;
     width: 10rem;
@@ -100,6 +107,9 @@ label{
 .btn:hover{
     background-color: gray;
 }
+.btn.btn-cncl{
+  background-color: rgb(161, 111, 111);
+}
 .contact-section{
     width: 100%;
     height: auto; 
@@ -107,17 +117,16 @@ label{
 }
 ul{
   list-style-type: none;
-  height: 20rem;
+  height: 40rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .contact{
- 
   width: 100%;
   height: 5rem;
   padding: 1rem;
   border-top: 1px solid rgb(197, 197, 197);
   border-bottom: 1px solid rgb(197, 197, 197);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,8 +152,64 @@ ul{
   align-items: center;
   font-size: 1.4rem;
 }
+.icons{
+  width: 8rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .trash-icon{
+  padding: 1rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 4rem;
   color: rgb(252, 63, 63);
+}
+.edit-icon{
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: rgb(136, 136, 86);
+}
+.link-list{
+  position: absolute;
+  right: 15rem;
+  top: 5rem;
+  width: 30rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.main h4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.main h4 a{
+  /* margin: 0.5rem; */
+  font-size: 1.5rem
+}
+ul p {
+  /* font-size: 2rem; */
+  /* text-align: center; */
+  color: rgb(99, 98, 98);
+}
+a{
+  color: gray;
+  /* padding: 1rem; */
+  text-decoration: none;
+}
+a:focus{
+ background-color: gray;
+ color: #fff;
+}
+.main.main-contact{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }

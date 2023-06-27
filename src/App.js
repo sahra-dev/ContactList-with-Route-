@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 import './app.css'
-import Body from "./components/Body";
+import Body from './Body'
 
-const App = () =>{
-    return( <Body /> )
+const App = () => {
+  return <Body />
 }
 
 export default App
