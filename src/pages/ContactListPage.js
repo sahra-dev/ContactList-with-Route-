@@ -1,15 +1,10 @@
 import Contacts from '../components/Contacts'
 
-const ContactListPage = ({ contacts, deleteHandler, showContact, editPostHandler}) => {
+const ContactListPage = () => {
   return (
     <>
       <div className=" main">
-        <Contacts
-          contacts={contacts}
-          deleteHandler={deleteHandler}
-          clickHandler={showContact}
-          editPostHandler={editPostHandler}
-        />
+        <Contacts />
       </div>
     </>
   )

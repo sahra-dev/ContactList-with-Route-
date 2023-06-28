@@ -1,10 +1,10 @@
 import AddContact from "../components/AddContact";
 
-const AddContactPage = ({postHandler }) => {
+const AddContactPage = ({ ...props}) => {
     return ( 
         <>
         <div className="main">
-            <AddContact postHandler={postHandler} />
+            <AddContact props={props}/>
         </div>
         </>
      );

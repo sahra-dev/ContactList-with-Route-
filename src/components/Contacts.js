@@ -1,13 +1,67 @@
 import { BsFillPersonFill, BsFillTrash3Fill } from 'react-icons/bs'
 import { AiFillEdit } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import AddContact from './AddContact'
+import http from '../services/httpServices'
 
-const Contacts = ({ contacts, deleteHandler,  editPostHandler}) => {
+const Contacts = () => {
   const [edit, setEdit] = useState(false)
   const [id, setId] = useState(0)
-  // console.log((contacts));
+  const [value, setValue] = useState('')
+  const [contacts, setContacts] = useState([])
+  const [allContacts, setAllContacts] = useState([])
+
+  useEffect(() => {
+    const getContacts = async () => {
+      try {
+        const contacts1 = await http.get('/contacts')
+        setContacts(contacts1.data)
+        setAllContacts(contacts1.data)
+      } catch (error) {
+        console.log(error.name)
+      }
+    }
+    getContacts()
+  }, [])
+  const deleteHandler = async (id) => {
+    try {
+      await http.delete(`/contacts/${id}`)
+      const contacts1 = await http.get('/contacts')
+      setContacts(contacts1.data)
+    } catch (error) {
+      console.log(error.name)
+    }
+  }
+  const editPostHandler = async (info) => {
+    //? that is correct but it hasn't good performance
+    // await deleteHandler(info.id)
+    // await postHandler(info)
+    //?
+    await http.put(`/contacts/${info.id}`, {
+      name: info.name,
+      email: info.email,
+    })
+    const contact1 = await http.get('/contacts')
+    setContacts(contact1.data)
+  }
+  const searchHandler = (e) => {
+    const value1 = e.target.value
+    setValue(value1)
+    if (value1 !== '') {
+      const filtered = allContacts.filter((item) => {
+        return Object.values(item)
+          .join(' ')
+          .toLowerCase()
+          .trim()
+          .includes(value1.toLowerCase().trim())
+        // return item.name.toLowerCase().trim().includes(value1.toLowerCase())
+      })
+      setContacts(filtered)
+    } else {
+      setContacts(contacts)
+    }
+  }
   const renderContacts = contacts.map((item) => {
     const { id, name, email } = item
     return (
@@ -45,7 +99,6 @@ const Contacts = ({ contacts, deleteHandler,  editPostHandler}) => {
       </Link>
     )
   })
-
   const render = () => {
     if (edit) {
       return (
@@ -62,9 +115,20 @@ const Contacts = ({ contacts, deleteHandler,  editPostHandler}) => {
       return <p style={{ fontSize: '2rem' }}> Contact List Is Empty ...</p>
     }
   }
+
   return (
     <>
       <div className="contact-section">
+        { edit ? '' : 
+      <div className="search-section">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search..."
+            onChange={searchHandler}
+            value={value}
+          />
+        </div>}
         <ul>{render()}</ul>
       </div>
     </>
