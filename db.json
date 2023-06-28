@@ -1,24 +1,9 @@
 {
   "contacts": [
     {
-      "name": "sahra",
-      "email": "sahra@yahoo.com",
+      "name": "Sahra Aeendar Tehran",
+      "email": "sahra.aeendar@gmail.com",
       "id": 1
-    },
-    {
-      "name": "sahra tehran",
-      "email": "sahra@yahoo.com",
-      "id": 3
-    },
-    {
-      "name": "sahra rrr",
-      "email": "sahra.tehrani2020@yahoo.com",
-      "id": 4
-    },
-    {
-      "name": "sahra f",
-      "email": "sahra.tehrani2020@yahoo.com",
-      "id": 5
     }
   ]
 }
