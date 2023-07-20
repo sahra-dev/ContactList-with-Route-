@@ -34,10 +34,6 @@ const Contacts = () => {
     }
   }
   const editPostHandler = async (info) => {
-    //? that is correct but it hasn't good performance
-    // await deleteHandler(info.id)
-    // await postHandler(info)
-    //?
     await http.put(`/contacts/${info.id}`, {
       name: info.name,
       email: info.email,
@@ -55,7 +51,6 @@ const Contacts = () => {
           .toLowerCase()
           .trim()
           .includes(value1.toLowerCase().trim())
-        // return item.name.toLowerCase().trim().includes(value1.toLowerCase())
       })
       setContacts(filtered)
     } else {

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 const Nav = () => {
     return ( 
         <nav>
-            Contact Manager
+            <h1> Contacts App</h1>
             <ul className='link-list'>
             <li>
               <NavLink to="/" >Home</NavLink>
