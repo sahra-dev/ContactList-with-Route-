@@ -115,20 +115,20 @@ const Contacts = () => {
   return (
     <>
       <div className="contact-section">
-        { edit ? '' : 
-      <div className="search-section">
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search..."
-            onChange={searchHandler}
-            value={value}
-          />
-        </div>}
-        <ul>
-          {render()}
-          {/* <Loading /> */}
-          </ul>
+        {edit ? (
+          ''
+        ) : (
+          <div className="search-section">
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search..."
+              onChange={searchHandler}
+              value={value}
+            />
+          </div>
+        )}
+        <ul>{render()}</ul>
       </div>
     </>
   )

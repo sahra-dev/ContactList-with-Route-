@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <div >
+    <div className="contacts-loading" >
       <img src="./assets/loading/Loading.gif" alt="loading" />
     </div>
   )

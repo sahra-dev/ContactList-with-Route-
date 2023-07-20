@@ -6,9 +6,10 @@
 html {
   font-size: 62.5%;
   font-family: cursive;
+  overflow-x: hidden;
 }
-#root{
-    width: 100vw;
+#root {
+  width: 100vw;
   height: 100vh;
 }
 .body {
@@ -20,8 +21,12 @@ html {
   justify-content: flex-start;
   align-items: center;
 }
+a {
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+}
+
 nav {
-  padding-top: 1rem;
   width: 100%;
   height: 13rem;
   border-bottom: 1px solid rgb(182, 182, 182);
@@ -35,100 +40,147 @@ nav h1 {
   color: #fff;
   text-shadow: 3px 3px 5px black;
 }
-nav ul{
-  
+nav ul {
   list-style-type: none;
 }
- .main{
-    margin: 2rem;
-     display: flex ;  
-    width: 70rem; 
-     flex-direction: column;  
-     justify-content: flex-start;  
-     align-items: flex-start; 
- }
-.title{
-    font-size: 1.8rem;
+.link-list a{
+  padding:0.5rem 1rem ;
+  border-radius: 0.5rem;
 }
-.form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    /* margin-left: 6rem; */
+.link-list a:focus {
+  background-color: gray;
+  color: #fff;
 }
-input{
-    all: unset;
-    width: 90%;
-    height: 2rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-    font-family: cursive;
-    color: rgb(53, 53, 53);
-    border: 1px solid #fff;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-} 
-input:focus{
+.main {
+  margin: 2rem;
+  display: flex;
+  width: 70rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main h3 {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #fff;
+  color: rgb(90, 90, 90);
+}
+.main h6 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-icon {
+  width: 20rem;
+  height: 20rem;
+  border: 1rem solid;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-icon .icon {
+  font-size: 16rem;
+}
+.main h6 a p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+.main h6 a {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main h6 a:focus {
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #fff;
+  color: rgb(90, 90, 90);
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+input {
+  all: unset;
+  width: 100%;
+  height: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  font-family: cursive;
+  color: rgb(53, 53, 53);
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+input:focus {
   border: 1px solid purple;
 }
-label{
-    font-size: 1.4rem;
-    color: gray;
-    margin-left: 0.5rem;
+label {
+  font-size: 1.4rem;
+  color: gray;
+  margin-left: 0.5rem;
 }
-.btns{
+.btns {
   width: 23rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.btn{
-    all: unset;
-    width: 10rem;
-    height: 3rem;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(167, 165, 165);
-    color:#fff ;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    margin-left: 0.2rem;
-    font-size: 1.3rem;
+.btn {
+  all: unset;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(167, 165, 165);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+  font-size: 1.3rem;
 }
-.btn:hover{
-    background-color: gray;
+.btn:hover {
+  background-color: gray;
 }
-.btn.btn-cncl{
+.btn.btn-cncl {
   background-color: rgb(161, 111, 111);
 }
-.contact-section{
-    width: 100%;
-    height: auto; 
-    margin-top: 2rem;
+
+.contact-section {
+  width: 100%;
+  height: auto;
+  /* margin-top: 2rem; */
 }
-.contact-section ul{
-  width: 70rem;
-  min-height: 20rem ;
+.contact-section ul {
+  width: 100%;
+  min-height: 20rem;
   list-style-type: none;
   overflow-x: hidden;
   margin-bottom: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
-.contact-section ul li{
-  width: 60rem;
-}
-
-.contact{
+.contact-section ul a {
   width: 100%;
-  height: 5rem;
+}
+.contact {
+  width: 100%;
+  height: 7rem;
   padding: 1rem;
   border-top: 1px solid rgb(197, 197, 197);
   border-bottom: 1px solid rgb(197, 197, 197);
@@ -137,93 +189,193 @@ label{
   align-items: center;
   background-color: #fff;
 }
-.profile-icon{
- width: 4rem;
- height: 4rem;
- border-radius: 100%;
- color: rgb(97, 97, 97);
- background-color: #c4c4c4;
- margin-right: 2rem;
- 
+.profile-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  color: rgb(97, 97, 97);
+  background-color: #c4c4c4;
+  margin-right: 2rem;
 }
-.profile-email{
+.profile-name{
+  font-size: 1.7rem;
+  color: rgb(70, 70, 70);
+}
+.profile-email {
   color: gray;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
-.contact-info{
-  width: 30rem;
+.contact-info {
+  width: 25rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1.4rem;
 }
-.icons{
-  width: 8rem;
+.icons {
+  width: 9rem;
   height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.trash-icon{
+.trash-icon {
   padding: 1rem;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: rgb(252, 63, 63);
 }
-.edit-icon{
+.trash-icon:hover{
+  color: rgb(248, 126, 126);
+}
+.edit-icon {
   padding: 1rem;
   cursor: pointer;
-  font-size: 4rem;
-  color: rgb(136, 136, 86);
+  font-size: 4.5rem;
+  color:rgb(201, 145, 41);
 }
-.link-list{
+.edit-icon:hover{
+  color:rgb(248, 200, 111) ;
+}
+.link-list {
   width: 30rem;
   height: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 1.4rem;
 }
-
-.main h4{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-.main h4 a{
-  /* margin: 0.5rem; */
-  font-size: 1.5rem
-}
-ul p {
-  /* font-size: 2rem; */
-  /* text-align: center; */
-  color: rgb(99, 98, 98);
-}
-a{
-  color: gray;
-  /* padding: 1rem; */
-  text-decoration: none;
-}
-a:focus{
- background-color: gray;
- color: #fff;
-}
-.main.main-contact{
+.main.main-contact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-.search-input{
-  width: 50%;
+.main-contact_img{
+ font-size: 10rem;
+ color: #555;
+}
+.main.main-contact a{
+  font-size: 1.5rem;
+}
+.main.main-contact p {
+  color: #555;
+  font-size: 2.5rem;
+}
+.search-input {
+  width: 60%;
+  height: 3rem;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
 }
-.search-section{
+.search-section {
   width: 100%;
-  height: 6rem;
+  height: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 800px) and (min-width : 600px ) {
+  .main {
+    width: 50rem;
+  }
+  .icons {
+    width: 8rem;
+  }
+  .trash-icon ,
+  .edit-icon {
+    font-size: 4rem;
+  }
+  .profile-email{
+    font-size: 1.1rem;
+  }
+  .profile-name{
+    font-size: 1.4rem;
+  }
+  .profile-icon{
+    width: 4rem;
+    height: 4rem;
+  }
+  .contact{
+    height: 6rem;
+  }
+  .search-section{
+    height: 6rem;
+  }
+  .search-input{
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    height: 10rem;
+    font-size: 1.8rem;
+  }
+  .main {
+    width: 35rem;
+  }
+  .main h3 {
+    font-size: 1.8rem;
+  }
+  .main-icon .icon {
+    font-size: 10rem;
+  }
+  .main-icon {
+    width: 13rem;
+    height: 13rem;
+  }
+  .icons {
+    width: 8rem;
+  }
+  .contact-info{
+    width: 20rem;
+  }
+  .trash-icon ,
+  .edit-icon {
+    font-size: 4rem;
+  }
+  .profile-email{
+    font-size: 0.9rem;
+  }
+  .profile-name{
+    font-size: 1.1rem;
+  }
+  .profile-icon{
+    width: 3rem;
+    height: 3rem;
+  }
+  .contact{
+    height: 5rem;
+  }
+  .search-section{
+    height: 5rem;
+  }
+  .search-input{
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  .contacts-loading img{
+    width: 10rem;
+    height: 10rem;
+  }
+  .main-contact_img{
+    font-size: 6rem;
+   }
+   .main.main-contact p {
+     font-size: 1.5rem;
+   }
+   .main.main-contact a{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width : 400px) {
+  .main{
+    width: 30rem;
+  }
+  .main-icon .icon {
+    font-size: 10rem;
+  }
+  .main-icon {
+    width: 13rem;
+    height: 13rem;
+  }
 }
