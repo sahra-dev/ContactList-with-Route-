@@ -6,27 +6,15 @@ const AddContact = ({ editPostHandler, edit, setEdit, contact, props }) => {
     name: '',
     email: '',
   })
-  const [contacts, setContacts] = useState([])
   useEffect(() => {
     edit ? setInfo(contact) : setInfo({ name: '', email: '' })
-    const getContacts = async () => {
-      try {
-        const contacts1 = await http.get('/contacts')
-        setContacts(contacts1.data)
-      } catch (error) {
-        console.log(error.name)
-      }
-    }
-    getContacts()
   }, [])
   const postHandler = async (info) => {
     try {
       await http.post('/contacts', {
         ...info,
       })
-      const contacts1 = await http.get('/contacts')
-      setContacts(contacts1.data)
-      console.log(contacts)
+      props.history.push('/contacts-list')
     } catch (error) {
       console.log(error)
     }
@@ -43,7 +31,6 @@ const AddContact = ({ editPostHandler, edit, setEdit, contact, props }) => {
         setEdit(false)
       } else {
         postHandler(info)
-        props.history.push('/contacts-list')
       }
     }
     setInfo({
