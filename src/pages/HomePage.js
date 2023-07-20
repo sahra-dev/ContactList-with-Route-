@@ -4,6 +4,9 @@ import { IoPeopleSharp , IoPersonAdd} from "react-icons/io5"
 const HomePage = () => {
   return (
     <div className="main">
+      <h3> Welcome to my App ,
+        Choose what you want !
+      </h3>
       <h6>
         <Link to="/add-contacts">
           <div className='main-icon'>
