@@ -112,9 +112,18 @@ label{
     margin-top: 2rem;
 }
 .contact-section ul{
+  width: 70rem;
+  min-height: 20rem ;
   list-style-type: none;
   overflow-x: hidden;
   margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section ul li{
+  width: 60rem;
 }
 
 .contact{

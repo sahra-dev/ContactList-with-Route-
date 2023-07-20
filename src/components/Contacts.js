@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import AddContact from './AddContact'
 import http from '../services/httpServices'
+import Loading from './loadingCmp/Loading'
 
 const Contacts = () => {
   const [edit, setEdit] = useState(false)
@@ -107,7 +108,7 @@ const Contacts = () => {
     } else if (contacts.length > 0) {
       return renderContacts
     } else {
-      return <p style={{ fontSize: '2rem' }}> Contact List Is Empty ...</p>
+      return <Loading />
     }
   }
 
@@ -124,7 +125,10 @@ const Contacts = () => {
             value={value}
           />
         </div>}
-        <ul>{render()}</ul>
+        <ul>
+          {render()}
+          {/* <Loading /> */}
+          </ul>
       </div>
     </>
   )
